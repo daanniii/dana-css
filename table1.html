@@ -5,21 +5,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>table1</title>
-</head>
-<body>
-  <h2>상품구성</h2>
   <style>
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid rgb(8, 93, 250);
       border-collapse: collapse;
     }
   
-    th, td {
+    th,
+    td {
       padding: 10px 20px;
     }
-  </style>
+
+    caption {
+      color:brown;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }  
+
+</style>
+</head>
+<body>
+  <h2>상품구성</h2>
+  
   <table>
     <caption>아이용과 어른용 상품 구성</caption>
+    <colgroup>
+      <col style="background-color:rgb(241, 253, 69)">
+      <col>
+      <col style="width:150px;">
+      <col style="width:150px;">
+    </colgroup>
     <thead>
     <tr>
       <th>구분</th>
@@ -30,25 +47,25 @@
     </thead>
     <tbody>
     <tr>
-      <td>아이용</td>
+      <td rowspan="2">아이용</td>
       <td>5kg</td>
       <td>5개</td>
       <td>35000원</td>
     </tr>
     <tr>
-      <td>아이용</td>
+      
       <td>10kg</td>
       <td>10개</td>
       <td>65000원</td>
     </tr>
     <tr>
-      <td>어른용</td>
+      <td rowspan="2">어른용</td>
       <td>5kg</td>
       <td>5개</td>
       <td>35000원</td>
     </tr>
     <tr>
-      <td>어른용</td>
+      
       <td>10kg</td>
       <td>10개</td>
       <td>65000원</td>
