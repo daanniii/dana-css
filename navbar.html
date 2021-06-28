@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navbar (recheck)</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body>
+  <form class='search'>
+    <button class="img-button" type="submit" name="click" value="">
+      <i class="fas fa-search"></i>
+    </button>
+  
+    <input class='keyword' type='text' name='search' maxlength=255 value="" autocomplete="off">
+  
+    <select class='SelectSearch' name='WhichSearch'>
+      <option id='google' value='google'>Google</option>
+      <option id='naver' value='naver'>Naver</option>
+    </select>
+  </form>
+  <script>
+    const Searching = Search.prototype;
+
+      function Search() {
+        this.keyword = document.querySelector('input[name = "search"]');
+        this.Engine = document.querySelector('.SelectSearch');
+        this.button = document.querySelector('.img-button');
+        this.form = document.querySelector('.search');
+
+        this.Engine();
+      }
+      Searching.Engine = function () {
+        this.form.addEventListener('submit',e => {
+
+          e.preventDefault();
+
+          let Engine = this.Engine.value;
+          let keyword = this.keyword.value;
+
+          if (Engine === 'google') {
+            location.href = 'https://www.google.com/search?q=' + keyword;
+          } else if (Engine === 'naver') {
+            location.href = 'https://search.naver.com/search.naver?qhttps://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=' + keyword;
+          }
+        });
+      }
+
+      new Search();
+  </script>
+</body>
+</html>
