@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>form</title>
+  <title>form list</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 <body>
-    <button name=fsearch method=get style="margin:0px;" action="http://search.naver.com/search.naver" target="_blank">
+    <form name=fsearch method=get style="margin:0px;" action="http://search.naver.com/search.naver" target="_blank">
       <input type=hidden name=where value="nexteach">
       <input name=query itemname="검색어" required value="" size="33" placeholder="네이버검색창">
-      <input type=button><i class="fas fa-search"> width='60' height='20' border=0 align=absmiddle></i></button>
+      <input type=image src="검색이미지" width='60' height='20' border=0 align=absmiddle>
     </form>
 
     <form name=fsearch method=get style="margin:0px;" action="http://www.google.co.kr/search" target="_blank">
       <input type=hidden name=where value="nexteach">
       <input name=query itemname="검색어" required value="" size="33" placeholder="구글검색창">
-      <input type=image src="구글로고혹은검색이미지주소를 넣으세요^^" width='60' height='20' border=0 align=absmiddle>
+      <input type=image src="검색이미지" width='60' height='20' border=0 align=absmiddle>
     </form>
 
     <form name=fsearch method=get style="margin:0px;" action="http://search.daum.net/search" target="_blank">
@@ -27,7 +27,7 @@
       <input type='hidden' name='sort' value='0'>
       <input type='hidden' name='onlyone' value='1'>
       <input type='text' name='q' size='33' placeholder="다음검색창">
-      <input type=image src="다음로고혹은검색어이미지주소를 넣으세요^^" width='60' height='20' border=0 align=absmiddle>
+      <input type=image src="검색이미지" width='60' height='20' border=0 align=absmiddle>
     </form>
 </body>
 </html>
