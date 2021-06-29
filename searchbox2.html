@@ -47,6 +47,7 @@
         }
         .itemlist{
           padding: 5%;
+          background-color:white;
                     
         }
         .item{
@@ -156,15 +157,15 @@
           value = document.getElementById("value").value.toUpperCase();
           item = document.getElementsByClassName("item");
   
-          for(i=0; i<item.length; i++){
-            name = item[i].getElementsByClassName("name");
+    for(i=0; i<item.length; i++){
+        name = item[i].getElementsByClassName("name");
             if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
-              item[i].style.display = "flex";
+                item[i].style.display = "flex";
             }else{
-              item[i].style.display = "none";
+                item[i].style.display = "none";
             }
-          }
+            }
         }
-  </script>
+    </script>
 </body>
 </html>
