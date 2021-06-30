@@ -13,6 +13,7 @@
             font-family: 'Poor Story', cursive;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
         .searchbox{
             width: 90%;
@@ -46,35 +47,51 @@
             margin: auto;
         }
         .itemlist{
-          padding: 5%;
-          background-color:white;
+            padding: 5%;
+            background-color:white;
                     
         }
         .item{
-          margin: 3% 0px;
-          display: flex;
-          align-items: center;
+            margin: 3% 0px;
+            display: flex;
+            align-items: center;
         }
         .icon{
-           width: 25px;
-           height: 25px;
-           background: #E0D3B6;
-           color: white;
-           font-size: 15px;
-           text-align: center;
-           line-height: 25px;
-           border-radius: 50%;
-           margin-right: 8px;
+            width: 25px;
+            height: 25px;
+            background: #E0D3B6;
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 50%;
+            margin-right: 8px;
         }
-         .name{
-           font-size: 17px;
-           font-weight: 470;
-           color: #333;
+        .name{
+            font-size: 17px;
+            font-weight: 470;
+            color: #333;
         }
         .top{
             padding: 8px;
             margin: 8px;
             color:rgb(19, 6, 206);
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 42px;
+            height: 42px;
+            background-color:rgb(252, 167, 167);
+            color: #fff;
+            border: 2px solid #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -87,11 +104,11 @@
                   <i class="fas fa-cat"></i>
                   검색창</h1>
             </div>
-              <input onkeyup="filter()" type="text" id="value" placeholder="검색어를 입력해보세요">
-              <button class= "img-button"type = "submit" name = "click" value ="">
-              <i class="fas fa-paw"></i>
+                <input onkeyup="filter()" type="text" id="value" placeholder="검색어를 입력해보세요">
+                <button class= "img-button"type = "submit" name = "click" value ="">
+                <i class="fas fa-paw"></i>
             </button>
-              </div>
+                </div>
         </div>
         <div class ="itemlist">
             <div class="item">
@@ -146,17 +163,51 @@
               <span class="icon">C</span>
               <span class="name">배경 이미지</span>
           </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">웹 폰트</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">테두리</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">마진</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">속성 선택자</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">선형 그러데이션</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">인라인 레벨 요소</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">인라인 스타일</span>
+        </div>
+        <div class="item">
+            <span class="icon">C</span>
+            <span class="name">타입 선택자</span>
+        </div>
             
+        </div>
+        <div id="scrollTop">
+            <i class="fas fa-chevron-up"></i>
         </div>
 
     <script type="text/javascript">
         function filter(){
-  
-          var value, name, item, i;
-  
-          value = document.getElementById("value").value.toUpperCase();
-          item = document.getElementsByClassName("item");
-  
+            var value, name, item, i;
+
+            value = document.getElementById("value").value.toUpperCase();
+            item = document.getElementsByClassName("item");
+
     for(i=0; i<item.length; i++){
         name = item[i].getElementsByClassName("name");
             if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
@@ -166,6 +217,16 @@
             }
             }
         }
+    </script>
+    <script>
+        document.querySelector("#scrollTop").addEventListener("click", (e) => {
+                e.preventDefault();
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }); 
     </script>
 </body>
 </html>
